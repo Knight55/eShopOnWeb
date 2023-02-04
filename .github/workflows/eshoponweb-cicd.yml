@@ -8,7 +8,7 @@ env:
   RESOURCE-GROUP: rg-az400-tdani
   LOCATION: westeurope
   TEMPLATE-FILE: .azure/bicep/webapp.bicep
-  SUBSCRIPTION-ID: "120f3660-bed5-4914-93fa-4eb19ab06471"
+  SUBSCRIPTION-ID: 120f3660-bed5-4914-93fa-4eb19ab06471
   WEBAPP-NAME: webapp-az400-tdani
 
 
@@ -72,7 +72,8 @@ jobs:
     - name: Azure Login
       uses: azure/login@v1
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
+        allow-no-subscriptions: true
            
     # Deploy Azure WebApp using Bicep file
     - name: deploy
