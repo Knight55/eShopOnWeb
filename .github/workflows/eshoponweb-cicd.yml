@@ -8,8 +8,8 @@ env:
   RESOURCE-GROUP: rg-az400-tdani
   LOCATION: westeurope
   TEMPLATE-FILE: .azure/bicep/webapp.bicep
-  SUBSCRIPTION-ID: 120f3660-bed5-4914-93fa-4eb19ab06471
-  WEBAPP-NAME: webapp-az400-tdani
+  SUBSCRIPTION-ID: "120f3660-bed5-4914-93fa-4eb19ab06471"
+  WEBAPP-NAME: webapp-az400-tdani-126546
 
 
 jobs:
